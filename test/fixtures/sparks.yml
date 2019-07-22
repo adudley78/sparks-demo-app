@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spark_type: MyString
+  spark_date: 2019-07-22
+  title: 
+  url: MyString
+  member: MyString
+  published: false
+
+two:
+  spark_type: MyString
+  spark_date: 2019-07-22
+  title: 
+  url: MyString
+  member: MyString
+  published: false
