@@ -20,3 +20,6 @@ console.log('Hello World from Webpacker')
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
 ReactRailsUJS.useContext(componentRequireContext);
+
+// const { a, b, c, ...rest } = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+// console.log(rest);
