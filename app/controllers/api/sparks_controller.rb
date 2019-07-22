@@ -28,8 +28,8 @@ class Api::SparksController < ApplicationController
   end
 
   def update
-    event = Spark.find(params['id'])
-    event.update(spark_params)
+    spark = Spark.find(params['id'])
+    spark.update(spark_params)
     respond_with Spark, json: spark
   end
 
