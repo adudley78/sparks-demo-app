@@ -1,42 +1,29 @@
-import React from 'react';
+import React from "react";
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-// import Header from './Header';
-// import SparkList from './SparkList';
-
-const GET_SPARKS_REQUEST = 'GET_SPARKS_REQUEST';
-const GET_SPARKS_SUCCESS = 'GET_SPARKS_SUCCESS';
-
-function getSparks() {
-    console.log('getSparks() Action!!!')
-    return dispatch => {
-        dispatch ({ type: GET_SPARKS_REQUEST });
-        return fetch(`api/sparks.json`)
-        .then(response => response.json())
-        .then(json => dispatch(getSparksSuccess(json)))
-        .catch(error => console.log(error));
-    };
-};
-
-function getSparksSuccess(json) {
-    return {
-        type: GET_SPARKS_SUCCESS,
-        json
-    };
-}
+import { List } from 'semantic-ui-react'
+import { getSparks } from '../actions';
 
 class Editor extends React.Component {
     render() {
         const { sparks } = this.props;
-        // if (sparks === null) return null;
         const sparksList = sparks.map((spark) => {
-            return <li>{spark.title} {spark.member}</li>
+            return (
+                <List.Item key={spark}>
+                    <List.Icon name='arrow circle right' size='large' verticalAlign='middle' />
+                    <List.Content>
+                        <List.Header as='a'>{spark.title}</List.Header>
+                        <List.Description as='a'>{spark.url}</List.Description>
+                    </List.Content>
+                </List.Item>
+            );
         })
-        
+
         return (
             <React.Fragment>
-                this.props.getSparks()
-               <ul>{ sparksList }</ul>
+                <button className="getSparksBtn" onClick={() => this.props.getSparks()}>getSparks</button>
+                <br />
+                <List divided relaxed>{sparksList}</List>
             </React.Fragment>
         );
     }
