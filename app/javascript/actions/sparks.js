@@ -5,8 +5,9 @@ export function getSparks() {
     console.log('getSparks() Action!!')
     return dispatch => {
         dispatch({ type: GET_SPARKS_REQUEST });
-        return fetch('/api/sparks.json')
+        return fetch(`api/sparks.json`)
             .then(response => response.json())
+            // .then(data => console.log(data))
             .then(json => dispatch(getSparksSuccess(json)))
             .catch(error => console.log(error));
     };

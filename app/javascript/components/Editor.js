@@ -5,6 +5,7 @@ import { List } from 'semantic-ui-react'
 import { getSparks } from '../actions';
 
 class Editor extends React.Component {
+    
     render() {
         const { sparks } = this.props;
         const sparksList = sparks.map((spark) => {

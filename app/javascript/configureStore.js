@@ -3,12 +3,7 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const initialState = {
-    sparks: [
-        {
-            name: "test",
-            guid: "123"
-        }
-    ]
+    sparks: []
 };
 
 import rootReducer from "./reducers";
