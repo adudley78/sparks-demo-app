@@ -10,7 +10,7 @@ class Editor extends React.Component {
         const { sparks } = this.props;
         const sparksList = sparks.map((spark) => {
             return (
-                <List.Item key={spark}>
+                <List.Item key={spark.id}>
                     <List.Icon name='arrow circle right' size='large' verticalAlign='middle' />
                     <List.Content>
                         <List.Header as='a'>{spark.title}</List.Header>
@@ -30,8 +30,12 @@ class Editor extends React.Component {
     }
 }
 
+Editor.defaultProps = {
+    sparks: []
+}
+
 const structuredSelector = createStructuredSelector({
-    sparks: state => state.sparks,
+    sparks: state => state.sparksReducer.sparks,
 });
 
 const mapDispatchToProps = { getSparks };
