@@ -12,8 +12,8 @@ class App extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" render={() => ("Home!")} />
-            <Route path="/editor" render={() => <Editor />} />
+            {/* <Route exact path="/" render={() => ("Home!")} /> */}
+            <Route exact path="/" render={() => <Editor />} />
           </Switch>
         </BrowserRouter>
       </Provider>
