@@ -1,8 +1,8 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Input, Menu } from 'semantic-ui-react';
 
 class Navbar extends React.Component {
-    state = {}
+    state = { activeItem: 'home' }
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -10,41 +10,35 @@ class Navbar extends React.Component {
         const { activeItem } = this.state
 
         return (
-            <Menu>
+            <Menu text>
+                <Menu.Item header>Sparks</Menu.Item>
                 <Menu.Item
                     name='new'
                     active={activeItem === 'new'}
-                    onClick={this.handleItemClick}
-                >
-                    New
-                </Menu.Item>
-
+                    onClick={this.handleItemClick}/>
                 <Menu.Item
                     name='past'
                     active={activeItem === 'past'}
-                    onClick={this.handleItemClick}>
-                    
-                    Past
-                </Menu.Item>
-
+                    onClick={this.handleItemClick}
+                />
                 <Menu.Item
                     name='submit'
                     active={activeItem === 'submit'}
-                    onClick={this.handleItemClick}>
-                    
-                    Submit
-                </Menu.Item>
-
-                <Menu.Item
-                    name='login'
-                    active={activeItem === 'login'}
-                    onClick={this.handleItemClick}>
-
-                    Login
-                </Menu.Item>
+                    onClick={this.handleItemClick}
+                />
+                <Menu.Menu position='right'>
+                    <Menu.Item>
+                        <Input icon='search' placeholder='Search...' />
+                    </Menu.Item>
+                    <Menu.Item
+                        name='login'
+                        active={activeItem === 'login'}
+                        onClick={this.handleItemClick}
+                    />
+                </Menu.Menu>
             </Menu>
-        )
-    }
-}
+        );
+    };
+};
 
 export default Navbar;
