@@ -4,22 +4,27 @@ import { createStructuredSelector } from 'reselect';
 import { List } from 'semantic-ui-react'
 import { getSparks } from '../actions';
 import { Link } from 'react-router-dom';
+import Spark from './Spark';
 
 class Editor extends React.Component {
     
     componentDidMount() {
        this.props.getSparks()
     };
-
+    
     render() {
         const { sparks } = this.props;
-        const sparksList = sparks.map((spark) => {
+        const sparksList = sparks.map((spark, i) => {
             return (
                 <List.Item key={spark.id}>
-                    <List.Icon name='arrow circle right' size='large' verticalAlign='middle' />
+                    <List.Icon name='lightbulb outline' size='large' verticalAlign='middle' />
                     <List.Content>
-                        <List.Header as='a'>{spark.spark_date} - {spark.title}</List.Header>
-                        {/* <List.Description as='a'>{spark.url}</List.Description> */}
+                        <List.Header>
+                            {i + 1}. <a href={spark.url} target="_blank">{spark.title}</a>
+                        </List.Header>
+                        <List.Description>
+                            Something
+                        </List.Description>
                     </List.Content>
                 </List.Item>
             );

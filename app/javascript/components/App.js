@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import Editor from './Editor';
 import Header from './Header';
 
+
 import configureStore from '../configureStore'
 const store = configureStore();
 
@@ -15,7 +16,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={() => <Editor />} />
-            {/* <Route path="/sparks/:id?" component={Editor} /> */}
+            <Route path="/sparks/:id?" render={() => <Editor />} />
           </Switch>
         </BrowserRouter>
       </Provider>
