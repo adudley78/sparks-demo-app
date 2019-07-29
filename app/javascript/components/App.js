@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Editor from './Editor';
 import Header from './Header';
+import Navbar from './Navbar';
 
 
 import configureStore from '../configureStore'
@@ -12,6 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
+        <Navbar />
         <Header />
         <BrowserRouter>
           <Switch>
@@ -24,4 +26,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default App;
