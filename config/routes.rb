@@ -10,6 +10,11 @@ Rails.application.routes.draw do
     !req.xhr? && req.format.html?
   end
 
+  get 'sparks', to: 'site#index'
+  get 'sparks/new', to: 'site#index'
+  get 'sparks/:id', to: 'site#index'
+  get 'sparks/:id/edit', to: 'site#index'
+
   namespace :api do
       resources :sparks, only: %i[index show create destroy update]
   end
