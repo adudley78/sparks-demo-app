@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 
 class Editor extends React.Component {
     
+    componentDidMount() {
+       this.props.getSparks()
+    };
+
     render() {
         const { sparks } = this.props;
         const sparksList = sparks.map((spark) => {
@@ -23,9 +27,6 @@ class Editor extends React.Component {
 
         return (
             <React.Fragment>
-                <br />
-                <div className="getSparksBtn" onClick={() => this.props.getSparks()}>Get Them Sparks Now! Yuh hear?</div>
-                <br />
                 <List divided relaxed>{sparksList}</List>
             </React.Fragment>
         );
