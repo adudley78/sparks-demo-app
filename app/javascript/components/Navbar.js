@@ -15,7 +15,8 @@ class Navbar extends React.Component {
                 <Menu.Item
                     name='new'
                     active={activeItem === 'new'}
-                    onClick={this.handleItemClick}/>
+                    onClick={this.handleItemClick}
+                />
                 <Menu.Item
                     name='past'
                     active={activeItem === 'past'}
@@ -34,7 +35,7 @@ class Navbar extends React.Component {
                         name='login'
                         active={activeItem === 'login'}
                         onClick={this.handleItemClick}
-                    />
+                />
                 </Menu.Menu>
             </Menu>
         );
