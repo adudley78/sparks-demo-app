@@ -78,7 +78,7 @@ class SparkForm extends React.Component {
 
         return (
             <div className="errors">
-                <h3>The following errors prohibited the event from being saved:</h3>
+                <h3>The following errors prohibited the spark from being saved:</h3>
                 <ul>
                     {Object.values(errors).map(error => (
                         <li key={error}>{error}</li>
@@ -102,13 +102,13 @@ class SparkForm extends React.Component {
                     <div>
                         <label htmlFor="title">
                             <strong>Title:</strong>
-                            <input type="text" id="title" name="title" />
+                            <input type="text" id="title" name="title" onChange={this.handleInputChange}/>
                         </label>
                     </div>
                     <div>
                         <label htmlFor="url">
                             <strong>URL:</strong>
-                            <input type="text" id="url" name="url" />
+                            <input type="text" id="url" name="url" onChange={this.handleInputChange}/>
                         </label>
                     </div>
                     <div>
@@ -119,7 +119,7 @@ class SparkForm extends React.Component {
                     <div>
                         <label htmlFor="text">
                             <strong>Text:</strong>
-                            <textarea cols="30" rows="10" id="text" name="text" />
+                            <textarea cols="30" rows="10" id="text" name="text" onChange={this.handleInputChange}/>
                         </label>
                     </div>
                     <div className="form-actions">
