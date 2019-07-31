@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { List } from 'semantic-ui-react'
 import { getSparks } from '../actions';
-import { Link } from 'react-router-dom';
-import Spark from './Spark';
 
 class Editor extends React.Component {
     

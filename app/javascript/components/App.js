@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Editor from './Editor';
-import Header from './Header';
 import SparkForm from './SparkForm';
+import LoginSignup from './LoginSignup';
 import Navbar from './Navbar';
 
 
@@ -15,12 +15,11 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <Navbar />
-        <Header />
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={() => <Editor />} />
             <Route exact path="/submit" render={() => <SparkForm />} />
-            <Route path="/sparks/:id?" render={() => <Editor />} />
+            <Route exact path="/login" render={() => <LoginSignup />} />
           </Switch>
         </BrowserRouter>
       </Provider>

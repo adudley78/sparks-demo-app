@@ -6,8 +6,9 @@ export function sparksReducer(state = initialState, action) {
     console.log(action.type);
     switch (action.type) {
         case "GET_SPARKS_SUCCESS":
-            // debugger
             return { sparks: action.json };
+        case "ADD_SPARK":
+            return { spark: action.json };
         default:
             return state;
     };
