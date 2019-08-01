@@ -5,6 +5,7 @@ import Editor from './Editor';
 import SparkForm from './SparkForm';
 import About from './About';
 import FAQ from './FAQ';
+import Header from './Header';
 import LoginSignup from './LoginSignup';
 import Navbar from './Navbar';
 // import Footer from './Footer';
@@ -19,6 +20,7 @@ class App extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <Navbar />
+          <Header />
           {/* <Footer /> */}
           <Switch>
             <Route exact path="/" render={() => <Editor />} />

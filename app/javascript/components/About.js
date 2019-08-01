@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => {
     return ( 
@@ -7,7 +7,7 @@ const About = () => {
             <br></br>
             <p>We call it sparks because every article, question, or point members <a href={'/submit'}>submit</a> is intended to <i>spark</i> a conversation!</p>
         </div>
-    )
-}
+    );
+};
 
-export default About
+export default About;
