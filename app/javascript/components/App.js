@@ -6,6 +6,7 @@ import SparkForm from './SparkForm';
 import About from './About';
 import LoginSignup from './LoginSignup';
 import Navbar from './Navbar';
+// import Footer from './Footer';
 
 
 import configureStore from '../configureStore'
@@ -17,6 +18,7 @@ class App extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <Navbar />
+          {/* <Footer /> */}
           <Switch>
             <Route exact path="/" render={() => <Editor />} />
             <Route exact path="/submit" render={() => <SparkForm />} />
