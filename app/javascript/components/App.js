@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import Editor from './Editor';
 import SparkForm from './SparkForm';
 import About from './About';
+import FAQ from './FAQ';
 import LoginSignup from './LoginSignup';
 import Navbar from './Navbar';
 // import Footer from './Footer';
@@ -22,6 +23,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" render={() => <Editor />} />
             <Route exact path="/submit" render={() => <SparkForm />} />
+            <Route exact path="/faq" render={() => <FAQ />} />
             <Route exact path="/about" render={() => <About />} />
             <Route exact path="/login" render={() => <LoginSignup />} />
           </Switch>
