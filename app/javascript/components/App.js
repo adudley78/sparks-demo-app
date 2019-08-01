@@ -15,8 +15,8 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Navbar />
         <BrowserRouter>
+          <Navbar />
           <Switch>
             <Route exact path="/" render={() => <Editor />} />
             <Route exact path="/submit" render={() => <SparkForm />} />
@@ -26,7 +26,7 @@ class App extends React.Component {
         </BrowserRouter>
       </Provider>
     );
-  }
-}
+  };
+};
 
 export default App;
