@@ -19,12 +19,12 @@ class Editor extends React.Component {
                     <List.Icon name='lightbulb outline' size='large' verticalAlign='middle' />
                     <List.Content>
                         <List.Header>
-                            {i + 1}. <a href={spark.url} target="_blank">{spark.title}</a>
+                            {i + 1}. <a href={spark.url} target="_blank">{spark.title}</a> ({spark.url})
                         </List.Header>
                         <List.Description>
-                            Something
+                            127 points | by {spark.member} on {spark.spark_date} | 72 <a href="#">comments</a>
                         </List.Description>
-                            <Counter />
+                        <Counter />
                     </List.Content>
                 </List.Item>
             );

@@ -15,13 +15,13 @@ class Counter extends React.Component {
     render() {
         return (
             <div>
-               <button onClick={ this.handleClick }>
-                    Like 
+                <button onClick={this.handleClick}>
+                    ▲
                 </button>
                 { this.state.count }
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
-export default Counter
+export default Counter;
