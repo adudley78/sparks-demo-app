@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { List } from 'semantic-ui-react'
 import { getSparks } from '../actions';
+import Counter from './Counter';
 
 class Editor extends React.Component {
     
@@ -23,6 +24,7 @@ class Editor extends React.Component {
                         <List.Description>
                             Something
                         </List.Description>
+                            <Counter />
                     </List.Content>
                 </List.Item>
             );

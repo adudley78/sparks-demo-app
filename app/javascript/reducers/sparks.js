@@ -13,3 +13,8 @@ export function sparksReducer(state = initialState, action) {
             return state;
     };
 };
+
+
+// { 
+//     ...state, sparks:action.json
+//     }
