@@ -38,7 +38,7 @@ class SparkForm extends React.Component {
     render() {
         return (
             <div className="ui form" onSubmit={this.handleSubmit}>
-                    <div className="field">
+                    {/* <div className="field">
                         <label htmlFor="type">
                             <strong>Type:</strong>
                             <select id="type" name="type" value={this.state.spark_type} onChange={this.handleInputChange}>
@@ -48,7 +48,7 @@ class SparkForm extends React.Component {
                                 <option value="statement">Statement</option>
                             </select>
                         </label>
-                    </div>
+                    </div> */}
                     
                     <div className="field">
                         <label htmlFor="title">
