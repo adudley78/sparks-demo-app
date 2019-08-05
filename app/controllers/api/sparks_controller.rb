@@ -36,7 +36,6 @@ class Api::SparksController < ApplicationController
       :published,
       :user_id
     )
-  
-end
+  end
 
 end
