@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sparks is an application for sharing and discussing articles, questions, and points about philosophy. Each share is intended to "spark" a conversation, hence the name. I'm building this application because I founded and run a philosophy discussion club that meets in-person every couple of weeks in Central Florida near where I live.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The back-end is Ruby on Rails serving as the API for the React front-end.

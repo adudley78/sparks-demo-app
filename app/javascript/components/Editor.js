@@ -21,10 +21,10 @@ class Editor extends React.Component {
                         <List.Header>
                             {i + 1}. <a href={spark.url} target="_blank">{spark.title}</a>
                         </List.Header>
-                        <List.Description>
-                            127 points | by {spark.member} on {spark.spark_date} | 72 <a href="#">comments</a>
-                        </List.Description>
                         <Counter />
+                        <List.Description>
+                                127 points | by {spark.member} on {spark.spark_date} | 72 <a href="#">comments</a>
+                        </List.Description>
                     </List.Content>
                 </List.Item>
             );

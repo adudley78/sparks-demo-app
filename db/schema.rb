@@ -10,16 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_05_152100) do
+ActiveRecord::Schema.define(version: 2019_08_05_150518) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
-    t.integer "spark_id"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spark_id"], name: "index_comments_on_spark_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "sparks", force: :cascade do |t|
@@ -31,19 +27,6 @@ ActiveRecord::Schema.define(version: 2019_08_05_152100) do
     t.boolean "published"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_sparks_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "spark_id"
-    t.integer "comments_id"
-    t.index ["comments_id"], name: "index_users_on_comments_id"
-    t.index ["spark_id"], name: "index_users_on_spark_id"
   end
 
 end

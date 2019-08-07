@@ -5,7 +5,8 @@
         "spark_date": "2019-07-01",
         "title": "At what time of day does famous programmers work?",
         "url": "https://ivan.bessarabov.com/blog/famous-programmers-work-time",
-        "published": true
+        "published": true,
+        "user_id": 1
     },
     {
         "member": "joe",
@@ -13,7 +14,8 @@
         "spark_date": "2019-07-20",
         "title": "HTTP Security Headers – A Complete Guide",
         "url": "https://nullsweep.com/http-security-headers-a-complete-guide/",
-        "published": false
+        "published": false,
+        "user_id": 2
     },
     {
         "member": "christian",
@@ -21,6 +23,7 @@
         "spark_date": "2019-07-15",
         "title": "Think in Math. Write in Code",
         "url": "https://justinmeiners.github.io/think-in-math/",
-        "published": true
+        "published": true,
+        "user_id": 3
     }
 ]

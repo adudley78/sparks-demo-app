@@ -1,0 +1,17 @@
+[
+    {
+        "content": "hey this spark rocks!",
+        "spark_id": 1,
+        "user_id": 2
+    },
+    {
+        "content": "hey this spark sucks!",
+        "spark_id": 2,
+        "user_id": 2
+    },
+    {
+        "content": "hey this spark is pretty good!",
+        "spark_id": 3,
+        "user_id": 3
+    }
+]
