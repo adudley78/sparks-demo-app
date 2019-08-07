@@ -33,8 +33,7 @@ class Api::SparksController < ApplicationController
       :title,
       :url,
       :member,
-      :published,
-      :user_id
+      :published
     )
   end
 

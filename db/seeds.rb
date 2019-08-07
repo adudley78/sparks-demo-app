@@ -7,8 +7,3 @@ json = ActiveSupport::JSON.decode(File.read('db/seeds/comments.json'))
 json.each do |record|
   Comment.create!(record)
 end
-
-json = ActiveSupport::JSON.decode(File.read('db/seeds/users.json'))
-json.each do |record|
-  User.create!(record)
-end

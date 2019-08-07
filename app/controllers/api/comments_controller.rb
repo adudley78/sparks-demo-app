@@ -2,7 +2,7 @@ class Api::CommentsController < ApplicationController
     respond_to :json
 
     def index
-        respond_with Comment.order(comment_date :DESC)
+        respond_with Comment.order(comment_date: :DESC)
     end
 
     def show
@@ -27,9 +27,10 @@ class Api::CommentsController < ApplicationController
 
     def comment_params
         params.require(:comment).permit(
+            :id,
             :content,
-            :spark_id,
-            :user_id
+            :comment_date,
+            :spark_id
         )
     end
 
