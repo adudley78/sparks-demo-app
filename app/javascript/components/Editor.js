@@ -23,7 +23,7 @@ class Editor extends React.Component {
                         </List.Header>
                         <Counter />
                         <List.Description>
-                                127 points | by {spark.member} on {spark.spark_date} | 72 <a href="#">comments</a>
+                                127 points | by {spark.member} on {spark.spark_date} | 72 <a href="/api/comments/${spark_id}">comments</a>
                         </List.Description>
                     </List.Content>
                 </List.Item>

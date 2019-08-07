@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   get 'sparks', to: 'site#index'
   get 'sparks/new', to: 'site#index'
   get 'sparks/:id', to: 'site#index'
-  get 'sparks/:id/edit', to: 'site#index'
+  # get 'sparks/:id/edit', to: 'site#index'
+
+  get 'comments', to: 'site#index'
+  get 'comments/new', to: 'site#index'
+  get 'comments/:id', to: 'site#index'
 
   namespace :api do
       resources :sparks, only: %i[index show create destroy update]
