@@ -14,7 +14,7 @@ export function sparksReducer(state = initialState, action) {
     };
 };
 
-
+// for updating
 // { 
 //     ...state, sparks:action.json
 //     }
